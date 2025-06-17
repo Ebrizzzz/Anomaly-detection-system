@@ -4,13 +4,13 @@ This repository contains the code and documentation for the Master's Thesis proj
 
 ![Dashboard](Dashboard.png)
 ![Furnace Summary](FurnaceSummary.png)
-![Structure](structure.png)
+
 
 ## 1. Project Overview
 
 This project pioneers a novel, unsupervised anomaly detection system designed to monitor the health of industrial thermocouples in stainless steel furnaces. Traditional monitoring relies on static thresholds or requires labeled data, which is often unavailable in industrial settings. This system addresses that gap by learning the normal operational behavior of the furnaces from historical data and flagging any significant deviations.
 
-The core innovation is a **hierarchical, multi-level detection framework** that provides not only alerts but also actionable, diagnostic insights.
+The core idea is a **hierarchical, multi-level detection framework** that provides not only alerts but also actionable, diagnostic insights.
 
 ### Key Features:
 - **Unsupervised Learning:** Operates without any pre-labeled anomaly data, making it ideal for real-world industrial applications.
@@ -23,6 +23,9 @@ The core innovation is a **hierarchical, multi-level detection framework** that 
 
 The system is designed for efficiency and interpretability. Instead of running all models at once, it uses a gated, top-down approach:
 
+![Structure](structure.png)
+
+
 1.  **Level 1: Furnace-Level Anomaly Detection**
     - An **Autoencoder** model trained on all sensors for an entire furnace monitors its overall health.
     - If the reconstruction error exceeds a predefined threshold, it triggers a deeper investigation.
@@ -34,15 +37,21 @@ The system is designed for efficiency and interpretability. Instead of running a
 3.  **Level 3: Thermocouple-Level Diagnosis**
     - For the most anomalous zone, **Ridge Regression models**—one for each thermocouple—are used.
     - Each model predicts a thermocouple's temperature based on its neighbors and other process variables. A large difference between the predicted and actual values points to a faulty sensor.
+  
 
 
-*(Suggestion: Replace this with a screenshot of your feature contribution bar chart)*
 
 ## 3. Technology Stack
 
 - **Backend & Modeling:** Python, Pandas, NumPy
 - **Machine Learning:** TensorFlow/Keras (for Autoencoders), Scikit-learn (for Ridge Regression, Isolation Forest, and Preprocessing)
 - **Dashboard:** Streamlit
-- **Development Environment:** Jupyter Notebook
+
 
 ## 4. Repository Structure
+
+├── ModelCreations.ipynb # Jupyter Notebook for data prep, model training, and saving.
+├── Benchmark.ipynb # Notebook for comparing Autoencoder vs. Isolation Forest performance.
+├── Analyzer.py # Python script to process new data rows and apply trained models.
+├── Dashboard.py # The main Streamlit application for visualization.
+├── thesis_report.pdf # The full PDF of the Master's Thesis.
