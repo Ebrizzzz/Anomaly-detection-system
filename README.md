@@ -2,8 +2,8 @@
 
 This repository contains the code and documentation for the Master's Thesis project titled: "Level-Based Unsupervised Anomaly Detection for Industrial Thermocouple Sensor Data in Stainless Steel Furnaces". The project was developed in collaboration with **Outokumpu**, the largest producer of stainless steel in Europe.
 
-![Dashboard](Dashboard.png)
-![Furnace Summary](FurnaceSummary.png)
+![Dashboard](Images/Dashboard.png)
+![Furnace Summary](Images/FurnaceSummary.png)
 
 
 ## 1. Project Overview
@@ -23,7 +23,7 @@ The core idea is a **hierarchical, multi-level detection framework** that provid
 
 The system is designed for efficiency and interpretability. Instead of running all models at once, it uses a gated, top-down approach:
 
-![Structure](structure.png)
+![Structure](Images/structure.png)
 
 
 1.  **Level 1: Furnace-Level Anomaly Detection**
@@ -40,8 +40,8 @@ The system is designed for efficiency and interpretability. Instead of running a
     - The evaluation results for ridge regression:
   
       
-      ![F1 TCs](F1_TCs.png)
-      ![F2 TCs](F2_TCs.png)
+      ![F1 TCs](Images/F1_TCs.png)
+      ![F2 TCs](Images/F2_TCs.png)
 
 
 ## 3. Technology Stack
@@ -62,3 +62,5 @@ The system is designed for efficiency and interpretability. Instead of running a
 ├── Dashboard.py # The main Streamlit application for visualization.
 
 ├── Master Degree Project 60 credits_Ebrahim_Golriz.pdf # The full PDF of the Master's Thesis.
+
+├── Final_Presentation_site.pdf # Presentation slides
