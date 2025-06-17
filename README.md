@@ -8,7 +8,7 @@ This repository contains the code and documentation for the Master's Thesis proj
 
 ## 1. Project Overview
 
-This project pioneers a novel, unsupervised anomaly detection system designed to monitor the health of industrial thermocouples in stainless steel furnaces. Traditional monitoring relies on static thresholds or requires labeled data, which is often unavailable in industrial settings. This system addresses that gap by learning the normal operational behavior of the furnaces from historical data and flagging any significant deviations.
+This thesis' goal is to create unsupervised anomaly detection system designed to monitor the health of industrial thermocouples in stainless steel furnaces. Traditional monitoring relies on static thresholds or requires labeled data, which is often unavailable in industrial settings. This system addresses that gap by learning the normal operational behavior of the furnaces from historical data and flagging any significant deviations.
 
 The core idea is a **hierarchical, multi-level detection framework** that provides not only alerts but also actionable, diagnostic insights.
 
