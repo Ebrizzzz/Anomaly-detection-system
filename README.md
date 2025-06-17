@@ -37,8 +37,11 @@ The system is designed for efficiency and interpretability. Instead of running a
 3.  **Level 3: Thermocouple-Level Diagnosis**
     - For the most anomalous zone, **Ridge Regression models**—one for each thermocouple—are used.
     - Each model predicts a thermocouple's temperature based on its neighbors and other process variables. A large difference between the predicted and actual values points to a faulty sensor.
+    - The evaluation results for ridge regression:
   
-
+      
+      ![F1 TCs](F1_TCs.png)
+      ![F2 TCs](F2_TCs.png)
 
 
 ## 3. Technology Stack
@@ -51,7 +54,11 @@ The system is designed for efficiency and interpretability. Instead of running a
 ## 4. Repository Structure
 
 ├── ModelCreations.ipynb # Jupyter Notebook for data prep, model training, and saving.
+
 ├── Benchmark.ipynb # Notebook for comparing Autoencoder vs. Isolation Forest performance.
+
 ├── Analyzer.py # Python script to process new data rows and apply trained models.
+
 ├── Dashboard.py # The main Streamlit application for visualization.
-├── thesis_report.pdf # The full PDF of the Master's Thesis.
+
+├── Master Degree Project 60 credits_Ebrahim_Golriz.pdf # The full PDF of the Master's Thesis.
